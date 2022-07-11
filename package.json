@@ -1,0 +1,24 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "postcss tailwind.css -o public/assets/css/app.css --watch",
+    "dev": "concurrently \"postcss tailwind.css -o public/assets/css/app.css --watch\" \"sirv -D ./public \"",
+    "prod": "postcss tailwind.css -o public/assets/css/app.css && postcss --use cssnano -r public/assets/css/app.css --no-map"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "concurrently": "^7.2.2",
+    "cssnano": "^5.1.12",
+    "postcss": "^8.4.14",
+    "postcss-cli": "^10.0.0",
+    "postcss-nested": "^5.0.6",
+    "sirv-cli": "^2.0.2",
+    "tailwindcss": "^3.1.5"
+  }
+}
